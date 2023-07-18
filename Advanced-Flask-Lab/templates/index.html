@@ -15,7 +15,7 @@
 					<header id="header">
 						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h1>{{user_bio}}</h1>
             <br>
             <!-- About me button -->
             <a href="#"><button style="color:white;width:40%" >More about me</button></a>
@@ -37,21 +37,32 @@
 							<section class="thumbnails">
                 
                 <div>
+
+              {% for x in posts %}
+              <a href="">
+							<center>	 <img src="{{x}}" alt="" /></center>
+                        <h3>{{posts[x]}}</h3>
+                        </a>
+							{% endfor %}
+
+</div>
                       <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+
+                        <img src="{{image_link}}" alt="" />
+                        <h3>Caption... blah blah blah 1</h3>
                       </a>
                 
                       <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src="static/images/thumbs/01.jpg" alt="" />
+                        <h3>Caption... blah blah blah2</h3>
                       </a>
                 </div>    
                 <div>
                   <a href="">
                         <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <h3>Caption... blah blah blah3</h3>
                       </a>
+                   
                 </div>  
 
 							</section>
