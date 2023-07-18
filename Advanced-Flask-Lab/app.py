@@ -19,13 +19,13 @@ posts = {
     "https://img.freepik.com/premium-photo/image-colorful-galaxy-sky-generative-ai_791316-9864.jpg?w=2000": "#MEET_HACKATHON",
     "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg": "Class of 2024's Y1 closing event cohort"}
 
+links =["https://twitter.com","https://facebook.com","https://instagram.com","https://news.com","https://gmail.com"]
 
-#####
 
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html',image_link = image_link,user_bio = user_bio,posts = posts)
+    return render_template('index.html',image_link = image_link,user_bio = user_bio,posts = posts,links=links)
 
 
 @app.route('/about')  # '/' for the default page
